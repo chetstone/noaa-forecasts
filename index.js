@@ -113,7 +113,7 @@ var noaaForecaster = {
           throw new Error('No forecasts found');
         }
 
-        var forecastData = forecasts.response;
+        var forecastData = forecasts.response.rawEncoded;
         console.log(forecastData);
         if (/^<error>/.test(forecastData) ) {
           throw new Error(forecastData);
