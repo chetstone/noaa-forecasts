@@ -8,7 +8,7 @@ var dwmlParser = require('dwml-to-json');
 var noaaForecaster = {
 
   _token: false,
-  _baseUrl: 'graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php',
+  _baseUrl: 'forecast.weather.gov/MapClick.php',
   _protocol: 'http',
 
   setToken: function (token) {
@@ -47,7 +47,7 @@ var noaaForecaster = {
   },
 
   _addDefaultOptions: function (options) {
-    options.product = options.product || 'time-series';
+    //options.product = options.product || 'time-series';
     return options;
   },
 
