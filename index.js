@@ -107,7 +107,7 @@ var noaaForecaster = {
   },
 
   _makeCall: function (url) {
-    return restling.get(url, {headers: this._getHeaders()} )
+    return restling.get(url/*, {headers: this._getHeaders()} */)
       .then(function(forecasts) {
         if (! (forecasts && forecasts.data) ) {
           throw new Error('No forecasts found');
