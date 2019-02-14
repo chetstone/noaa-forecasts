@@ -8,7 +8,7 @@ var dwmlParser = require('dwml-to-json');
 var noaaForecaster = {
 
   _token: false,
-  _baseUrl: 'forecast.weather.gov/MapClick.php',
+  _baseUrl: 'graphical.weather.gov/xml/sample_products/browser_interface/ndfdXMLclient.php',
   _protocol: 'http',
 
   setToken: function (token) {
