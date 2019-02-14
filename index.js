@@ -107,13 +107,13 @@ var noaaForecaster = {
   },
 
   _makeCall: function (url) {
-    return restling.get(url/*, {headers: this._getHeaders()} */)
+    return restling.get(url, {headers: this._getHeaders()} )
       .then(function(forecasts) {
         if (! (forecasts && forecasts.data) ) {
           throw new Error('No forecasts found');
         }
 
-        var forecastData = forecasts.response.raw;
+        var forecastData = forecasts.data;
         console.log(forecastData);
         if (/^<error>/.test(forecastData) ) {
           throw new Error(forecastData);
@@ -123,7 +123,7 @@ var noaaForecaster = {
   },
 
   _getHeaders: function () {
-    return { token: this._token};
+    return { /* token: this._token */ parser: x => x};
   }
 };
 
