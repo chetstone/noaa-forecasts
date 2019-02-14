@@ -114,7 +114,7 @@ var noaaForecaster = {
         }
 
         var forecastData = forecasts.response.rawEncoded;
-        console.log(forecastData);
+        //console.log(forecastData);
         if (/^<error>/.test(forecastData) ) {
           throw new Error(forecastData);
         }
